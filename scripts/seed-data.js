@@ -101,13 +101,13 @@ const seedData = async () => {
       }
     ]);
 
-    console.log('✅ Seed data created successfully:');
+    console.log(' Seed data created successfully:');
     console.log(`   - ${await db.User.count()} users`);
     console.log(`   - ${await db.Category.count()} categories`);
     console.log(`   - ${await db.Product.count()} products`);
 
   } catch (error) {
-    console.error('❌ Error seeding data:', error);
+    console.error(' Error seeding data:', error);
     throw error;
   }
 };

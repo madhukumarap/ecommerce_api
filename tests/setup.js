@@ -16,7 +16,7 @@ afterAll(async () => {
 jest.mock('../middleware/cloudinary', () => ({
   uploader: {
     upload: jest.fn().mockResolvedValue({
-      secure_url: 'https://example.com/test.jpg',
+      secure_url: 'https://example.com/test.jpg', //exmaple URL
       public_id: 'test-image'
     }),
     destroy: jest.fn().mockResolvedValue({})

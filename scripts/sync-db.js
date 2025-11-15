@@ -5,7 +5,7 @@ const syncDatabase = async () => {
   try {
     console.log('Testing database connection...');
     await db.sequelize.authenticate();
-    console.log('✅ Database connection established successfully.');
+    console.log(' Database connection established successfully.');
 
     console.log('Starting database synchronization...');
     
@@ -15,16 +15,16 @@ const syncDatabase = async () => {
     };
     
     await db.sequelize.sync(syncOptions);
-    console.log('✅ Database synchronized successfully.');
+    console.log(' Database synchronized successfully.');
 
     // Always run seed data after sync
-    console.log('🌱 Running seed data...');
+    console.log(' Running seed data...');
     await require('./seed-data')();
 
-    console.log('🎉 Database setup completed successfully!');
+    console.log(' Database setup completed successfully!');
     process.exit(0);
   } catch (error) {
-    console.error('❌ Database synchronization failed:', error.message);
+    console.error(' Database synchronization failed:', error.message);
     console.error('Full error:', error);
     process.exit(1);
   }
