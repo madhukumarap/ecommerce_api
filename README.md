@@ -101,9 +101,7 @@ DB_NAME=ecommerce_db
 DB_USER=postgres
 DB_PASSWORD=password
 
-# Database (SQLite - Alternative)
-DB_DIALECT=sqlite
-DB_STORAGE=./database.sqlite
+
 
 # JWT
 JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
